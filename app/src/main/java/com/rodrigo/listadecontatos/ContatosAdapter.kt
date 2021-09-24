@@ -1,5 +1,6 @@
 package com.rodrigo.listadecontatos
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +9,8 @@ class ContatosAdapter : RecyclerView.Adapter<ContatosAdapter.ContatosAdapterView
     private val list: MutableList<Contato> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContatosAdapterViewHolder {
-        TODO("Not yet implemented")
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.contato_item, parent, false)
+        return ContatosAdapterViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ContatosAdapterViewHolder, position: Int) {
@@ -22,6 +24,5 @@ class ContatosAdapter : RecyclerView.Adapter<ContatosAdapter.ContatosAdapterView
         fun bind(contato: Contato){
 
         }
-
     }
 }
