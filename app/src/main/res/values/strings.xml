@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ListaDeContatos</string>
     <string name="imgFoto_content_description"/>
+    <string name="foto_do_contato">Foto do Contato</string>
 </resources>
