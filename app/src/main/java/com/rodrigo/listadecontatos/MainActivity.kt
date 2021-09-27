@@ -1,26 +1,47 @@
 package com.rodrigo.listadecontatos
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
+//import android.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.widget.Toolbar
+
+
 
 class MainActivity : AppCompatActivity() {
-    private val rvList: RecyclerView by lazy{
+    private val rvList: RecyclerView by lazy {
         findViewById<RecyclerView>(R.id.rv_List)
     }
     private val adapter = ContatoAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.drawer_menu)
 
+        initDrawer()
         bindView()
         upDateList()
+
+    }
+    private fun initDrawer(){
+
+        val drawerLayout = findViewById<View>(R.id.drawerLayout) as DrawerLayout
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
     }
     private fun bindView(){
         rvList.adapter = adapter
