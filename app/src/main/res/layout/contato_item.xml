@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             tools:text ="Nome do contato"/>
         <TextView
+            style="@style/TextViewDefault"
             android:id="@+id/txtTelefone"
             app:layout_constraintTop_toBottomOf="@id/txtNome"
             app:layout_constraintStart_toEndOf="@id/imgFoto"

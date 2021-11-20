@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">ListaDeContatos</string>
-    <string name="imgFoto_content_description"/>
+    <string name="imgFoto_content_description" />
     <string name="foto_do_contato">Foto do Contato</string>
     <string name="menu_1">Menu 1</string>
     <string name="menu_2">Menu 2</string>
     <string name="menu_3">Menu 3</string>
     <string name="open_drawer">Abrir</string>
     <string name="close_drawer">Fechar</string>
+    <string name="NomedoContato">Nome do Contato</string>
+    <string name="Telefone">(00)00000-0000 </string>
 </resources>
